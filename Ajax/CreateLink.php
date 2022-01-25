@@ -6,11 +6,11 @@ include $createLink."\Mvc\Model\Operations\Core.php";
 $Core = new \Model\Operations\Core();
 
 $title = $_REQUEST['Title'];
-$hint = "";
+$link = "";
 
 
 if ($title !== "") {
-    $hint = $Core->toLowerUrl($title);
+    $link = $Core->toLowerUrl($title);
 }
 
-echo $hint === "" ? "no suggestion" : $hint;
+echo $link === "" ? "no suggestion" : $link;
